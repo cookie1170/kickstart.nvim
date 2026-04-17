@@ -6,22 +6,24 @@ return {
     keys = {
       {
         '<leader>f',
-        function() require('conform').format { async = true, lsp_format = 'fallback' } end,
+        function() require('conform').format { async = true } end,
         mode = '',
         desc = '[F]ormat buffer',
       },
     },
     ---@module 'conform'
     opts = {
-      notify_on_error = false,
-      format_on_save = true,
+      notify_on_error = true,
+
+      format_on_save = {
+        lsp_format = 'fallback',
+      },
+
+      default_format_opts = {
+        lsp_format = 'fallback',
+      },
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },

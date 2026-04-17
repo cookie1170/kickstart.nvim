@@ -12,7 +12,7 @@
   "mini.nvim": { "branch": "main", "commit": "29447d7b0e1fc9bc9d0384953e63be3fae816736" },
   "move.nvim": { "branch": "main", "commit": "599b14047b82e92874b9a408e4df228b965c3a1d" },
   "multiple-cursors.nvim": { "branch": "main", "commit": "8d410c06fad32cc0e3849318e056b308fbaafede" },
-  "neo-tree.nvim": { "branch": "main", "commit": "aa3500f7038a32ed4b0b765cd458b9c429062cac" },
+  "neo-tree.nvim": { "branch": "main", "commit": "4d0828d95adaf4250c1373d2cd9318d3509712b7" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-autopairs": { "branch": "master", "commit": "59bce2eef357189c3305e25bc6dd2d138c1683f5" },
   "nvim-lsp-file-operations": { "branch": "master", "commit": "b9c795d3973e8eec22706af14959bc60c579e771" },

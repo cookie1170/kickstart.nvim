@@ -21,6 +21,9 @@ require('lazy').setup {
     { import = 'plugins/lsp' },
     -- and from plugins/utils
     { import = 'plugins/utils' },
+
+    -- Automatically check for updates
+    checker = { enabled = true },
   },
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
