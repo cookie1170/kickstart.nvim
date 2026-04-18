@@ -36,6 +36,9 @@ return {
         { 'gr', group = 'LSP Actions', mode = { 'n' } },
       },
     },
+    keys = {
+      { '<C-h>', ':WhichKey<CR>', silent = true, mode = { 'n', 'v', 'i' } },
+    },
   },
 
   {
