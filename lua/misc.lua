@@ -16,8 +16,9 @@ vim.diagnostic.config {
   float = { border = 'rounded', source = 'if_many' },
   underline = { severity = { min = vim.diagnostic.severity.WARN } },
 
-  -- Errors show up at the bottom of lines
-  virtual_lines = true,
+  -- Errors show up at the end of lines
+  virtual_text = true,
+  virtual_lines = false,
 
   -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
   jump = { float = true },
