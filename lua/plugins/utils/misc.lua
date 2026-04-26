@@ -99,14 +99,15 @@ return {
 
   {
     -- Highlight todo, notes, etc in comments:
-    -- NOTE:
     -- PERF:
     -- TEST:
+    -- NOTE:
     -- TODO:
     -- WARN:
     -- HACK:
     -- FIXME:
     -- REMOVE:
+    -- SAFETY:
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
@@ -119,9 +120,10 @@ return {
         TODO = { icon = ' ', color = 'info' },
         HACK = { icon = ' ', color = 'warning' },
         WARN = { icon = ' ', color = 'warning', alt = { 'WARNING', 'XXX' } },
-        PERF = { icon = ' ', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },
-        NOTE = { icon = ' ', color = 'hint', alt = { 'INFO' } },
+        PERF = { icon = ' ', color = 'test', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },
         TEST = { icon = '⏲ ', color = 'test', alt = { 'TESTING', 'PASSED', 'FAILED' } },
+        NOTE = { icon = ' ', color = 'hint', alt = { 'INFO' } },
+        SAFETY = { color = 'error' },
         REMOVE = { icon = ' ', color = 'error' },
       },
     },
@@ -131,5 +133,12 @@ return {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
+  },
+
+  {
+    'norcalli/nvim-colorizer.lua',
+    event = 'VimEnter',
+    keys = { { '<leader>tc', ':ColorizerToggle<CR>', silent = true, mode = { 'n' }, desc = '[T]oggle [C]olorizer' } },
+    opts = {},
   },
 }
