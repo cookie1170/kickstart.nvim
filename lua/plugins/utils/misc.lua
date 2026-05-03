@@ -97,6 +97,12 @@ return {
     },
   },
 
+  { -- Plugin for resolving git merge conflicts
+    'akinsho/git-conflict.nvim',
+    version = '*',
+    config = true,
+  },
+
   {
     -- Highlight todo, notes, etc in comments:
     -- PERF:

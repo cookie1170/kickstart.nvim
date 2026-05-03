@@ -27,6 +27,13 @@ return { -- Collection of various small independent plugins/modules
     -- Move lines
     require('mini.move').setup()
 
+    local loader = require('mini.snippets').gen_loader
+    require('mini.snippets').setup {
+      snippets = {
+        loader.from_lang(),
+      },
+    }
+
     -- Special key  mappings
     --
     -- - <Tab>   - Increase indent (when on indent)

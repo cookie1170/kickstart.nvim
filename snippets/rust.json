@@ -41,8 +41,7 @@
   "marker": {
     "prefix": "mkmark",
     "body": [
-      "#[derive(Component, Reflect, PartialEq, Debug, Default, Clone, Copy)]",
-      "#[reflect(Component)]$0"
+      "#[derive(Component)]"
     ],
     "description": "A Bevy marker component"
   },
@@ -74,21 +73,21 @@
     "prefix": "optreflect",
     "body": [
       "#[cfg_attr(feature = \"reflect\", derive(bevy_reflect::Reflect))]",
-      "#[cfg_attr(feature = \"reflect\", reflect($1))]0"
+      "#[cfg_attr(feature = \"reflect\", reflect($1))]$0"
     ],
     "description": "A Reflect derive gated by a 'reflect' feature"
   },
   "observer": {
     "prefix": "mkobs",
     "body": [
-      "#[auto_observer(plugin = Plugin)]",
+      "#[auto_observer(plugin = Plugin)]$0"
     ],
     "description": "A Bevy observer"
   },
   "system": {
     "prefix": "mksys",
     "body": [
-      "#[auto_system(plugin = plugin, schedule = ${1:Schedule})]",
+      "#[auto_system(plugin = Plugin, schedule = ${1:Schedule})]$0"
     ],
     "description": "A Bevy system using bevy_auto_plugin"
   },
@@ -97,7 +96,7 @@
     "body": [
       "#[derive(AutoPlugin)]",
       "#[auto_plugin(impl_plugin_trait)]",
-      "pub(super) struct Plugin;"
+      "pub(super) struct Plugin;$0"
     ],
     "description": "A Bevy plugin using bevy_auto_plugin"
   },
