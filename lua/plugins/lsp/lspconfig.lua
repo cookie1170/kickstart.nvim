@@ -115,8 +115,6 @@ return {
 
       tombi = {}, -- Toml
 
-      wgsl_analyzer = {}, -- WGSL/WESL
-
       ['json-lsp'] = {},
 
       ['just-lsp'] = {}, -- Just (command runner)
