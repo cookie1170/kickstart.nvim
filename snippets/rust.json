@@ -7,7 +7,7 @@
     "description": "Common derives for a type"
   },
   "let else": {
-    "prefix": "let else",
+    "prefix": "letelse",
     "body": [
       "let ${1:Some}(${2:name}) = ${3:value} else {",
       "\treturn;",
