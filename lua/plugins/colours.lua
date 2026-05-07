@@ -1,11 +1,12 @@
 return {
-  'folke/tokyonight.nvim',
-  priority = 1000, -- Make sure to load this before all the other start plugins.
+  'ellisonleao/gruvbox.nvim',
+  priority = 1000, -- make sure to load this before all the other start plugins
   config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    require('tokyonight').setup {}
+    require('gruvbox').setup {
+      contrast = 'soft',
+    }
 
-    -- Load the colorscheme here.
-    vim.cmd.colorscheme 'tokyonight-night'
+    -- load the colourscheme
+    vim.cmd.colorscheme 'gruvbox'
   end,
 }
