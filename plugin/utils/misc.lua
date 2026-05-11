@@ -79,14 +79,3 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>:FloatermKill<CR>', {
   desc = 'Exit floating terminal',
   silent = true,
 })
--- automatically close character pairs
-vim.pack.add { gh 'windwp/nvim-autopairs' }
-require('nvim-autopairs').setup {}
-
--- highlights colour codes:
--- - #ffffff
--- - rgb(14, 26, 37)
-vim.pack.add { gh 'norcalli/nvim-colorizer.lua' }
-require('colorizer').setup(nil, { css = true })
-
-vim.keymap.set('n', '<leader>tc', ':ColorizerToggle<CR>', { silent = true, desc = '[T]oggle [C]olorizer' })
