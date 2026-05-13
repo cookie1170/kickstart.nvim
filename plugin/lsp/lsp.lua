@@ -16,7 +16,17 @@ local servers = {
     },
   }, -- rust
 
-  tombi = {}, -- toml
+  tombi = {
+    settings = {
+      tombi = {
+        lint = {
+          rules = {
+            ['tables-out-of-order'] = 'off',
+          },
+        },
+      },
+    },
+  }, -- toml
 
   ['json-lsp'] = {},
 
