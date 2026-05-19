@@ -1,4 +1,4 @@
--- set <space> as the leader ke
+-- set <space> as the leader key
 -- see `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
@@ -18,8 +18,11 @@ vim.opt.mouse = 'a'
 -- don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- make `foldlevel` a very high number to have all folds open by default
+vim.opt.foldlevel = 999
+
 -- sync clipboard between OS and Neovim
---  schedule the setting after `UiEnter` because it can increase startup-time
+-- schedule the setting after `UiEnter` because it can increase startup-time
 vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
 -- enable break indent
