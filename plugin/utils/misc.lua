@@ -75,7 +75,7 @@ vim.keymap.set({ 'n', 't' }, '<M-t>', '<C-\\><C-n>:FloatermToggle<CR>', {
   silent = true,
 })
 
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>:FloatermKill<CR>', {
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n>:FloatermKill<CR>', {
   desc = 'Exit floating terminal',
   silent = true,
 })
