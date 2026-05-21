@@ -61,6 +61,15 @@ require('snacks').setup {
       { section = 'keys', gap = 1, padding = 1 },
     },
   },
+
+  styles = {
+    input = {
+      -- show the input under the cursor
+      relative = 'cursor',
+      row = 1,
+      col = 0,
+    },
+  },
 }
 
 vim.keymap.set('n', '<leader>e', function() Snacks.explorer() end, { desc = 'File [E]xplorer' })
